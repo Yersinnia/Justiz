@@ -1,0 +1,272 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+//Justiz Shop
+    class justiz_basic {
+        name = "Justiz Ausrüstung";
+        side = "justiz";
+        conditions = "";
+        items[] = {
+            { "ItemGPS", "", 15, 5, "call life_justizlevel >= 1" }, //GPS
+            { "ItemMap", "", 50, 25, "call life_justizlevel >= 1" }, //MAP
+            { "ItemCompass", "", 50, 25, "call life_justizlevel >= 1" }, //Compass
+            { "murshun_cigs_lighter", "", 50, 1, "" },//Feuerzeug
+            { "murshun_cigs_cigpack", "", 80, 1, "" },//Kippen
+            { "MCS_id_justiz", "", 80, 1, "" },
+            { "MCS_id_police", "", 500, 25, "call life_coplevel >= 1" },
+            { "ACE_Flashlight_XL50", "", 10, 5, "call life_justizlevel >= 1" }, //Maglite
+            { "ACE_EarPlugs", "", 25, 5, "call life_justizlevel >= 1" }, //Oropax
+            { "ACE_CableTie", "", 5, 1, "call life_justizlevel >= 1" }, //Kabelbinder
+            { "ZAM_NV_Headset", "", 1500, 5, "call life_justizlevel >= 7" }, //Headset
+            { "steff_swat_earpiece", "", 5, 5, "call life_justizlevel >= 1" }, //Earpiece
+            { "tf_anprc148jem", "", 25, 5, "call life_justizlevel >= 1" },   //Funk Kurz
+            { "Rangefinder", "", 25, 5, "call life_justizlevel >= 1" }, //Entfernungsmesser
+            { "ACE_fieldDressing", "", 5, 20, "" },
+            { "ACE_packingBandage", "", 5, 35, "" },
+            { "optic_holosight_smg_blk_f", "", 50, 10, "call life_justizlevel >= 1" }, //Holo
+            { "optic_Holosight_blk_F", "", 50, 10, "call life_justizlevel >= 1" }, //Holo
+            { "optic_Hamr", "", 50, 10, "call life_justizlevel >= 7" }, //RCO
+            { "rhsusf_acc_su230_mrds", "", 50, 10, "call life_justizlevel >= 7" }, //SUV - Visier
+            { "rhsusf_acc_rotex5_grey", "", 50, 10, "call life_justizlevel >= 7" }, //M4A1 Mozzie
+            { "acc_flashlight", "", 50, 10, "call life_justizlevel >= 7" }, //Lampe
+            { "rhsusf_acc_wmx_bk", "", 50, 10, "call life_justizlevel >= 7" }, //Lampe
+            { "BT01_F", "", 5, 5, "call life_justizlevel >= 1" },    //Taser_mag
+            { "CSW_FN57", "", 25, 5, "call life_justizlevel >= 7" }, //Five - Seven 
+            { "hlc_smg_mp5k_PDW", "", 25, 5, "call life_justizlevel >= 6" }, //MP5K-PDW
+            { "hlc_smg_mp5a4", "", 25, 5, "call life_justizlevel >= 6" }, //MP5A4
+            { "SMG_02_F", "", 25, 5, "call life_justizlevel >= 6" }, //Scorpioon Evo
+            { "arifle_SPAR_01_blk_F", "", 25, 5, "call life_justizlevel >= 7" }, //HK416
+            { "rhs_weap_m4a1_carryhandle", "", 25, 5, "call life_justizlevel >= 8" }, //M4A1
+            { "rhs_weap_m4a1_blockII_bk", "", 25, 5, "call life_justizlevel >= 8" }, //M4A1 Block II
+            { "hlc_rifle_G36C", "", 25, 5, "call life_justizlevel >= 8" } //G36C
+        };
+        mags[] = {
+            { "Taser_mag", "", 5, 5, "call life_justizlevel >= 1" }, //Tazer
+            { "30Rnd_9x21_Mag_SMG_02", "", 5, 10, "call life_justizlevel >= 1" }, //9mm
+            { "hlc_30Rnd_9x19_B_MP5", "", 5, 10, "call life_justizlevel >= 1" }, //MP5 Mag   
+            { "30Rnd_556x45_Stanag", "", 5, 10, "call life_justizlevel >= 1" }, //HK416
+            { "hlc_30rnd_556x45_EPR_G36", "", 5, 10, "call life_justizlevel >= 1" }, //G36
+            { "CSW_20Rnd_57x28_SS190", "", 5, 10, "call life_justizlevel >= 1" }, //Five-Seven
+            { "rhs_mag_30Rnd_556x45_M855A1_Stanag", "", 5, 10, "call life_justizlevel >= 1" }, //M4A1
+            { "rhs_mag_30Rnd_556x45_M855A1_Stanag", "", 5, 10, "call life_justizlevel >= 1" } //M4A1
+ 
+        };
+        accs[] = {
+        };
+    };
+     
+     
+     
+     
+     
+___________________________________________________________________________________________________________________________________________________________________
+ 
+ 
+    //Klamotten Justiz
+    class justiz_clothing {
+        title = "Justiz Kleidung";
+        conditions = "";
+        side = "justiz";
+        uniforms[] = {
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "TRYK_SUITS_BLK_F", "", 10, "call life_justizlevel >= 1" },//MS
+            { "EF_MKJKT2", "", 10, "call life_justizlevel >= 1" },//MS Uniform
+            { "TRYK_U_B_BLKOCP_R_CombatUniformTshirt", "", 10, "call life_justizlevel >= 1" },//MS Uniform
+            { "EF_HM_B1", "", 10, "call life_justizlevel >= 7" },//MS Uniform UC
+            { "TRYK_U_B_wh_blk_Rollup_CombatUniform", "", 10, "call life_justizlevel >= 7" },//MS Uniform UC
+            { "U_I_G_resistanceLeader_F", "", 10, "call life_justizlevel >= 7" },//MS Uniform UC
+            { "EF_suit_1", "Pflichtverteidiger", 10, "call life_justizlevel >= 7" },//Orange Anzug
+            { "EF_suit_4", "Pflichtverteidiger", 10, "call life_justizlevel >= 7" },//Pflichtverteidiger
+            { "EF_suit_8", "Staatsanwalt", 10, "call life_justizlevel >= 8" },//Staatsanwalt
+            { "EF_suit_6", "Richter", 10, "call life_justizlevel >= 8" },//Richter
+            { "EF_FEM_3_9_BL", "", 10, "call life_justizlevel >= 8" },//Weiblich Dep.o.Justice
+            { "TRYK_U_B_BLKBLK_R_CombatUniform", "S-O-G", 10, "call life_justizlevel >= 7" }//SOG
+        };
+        headgear[] = {
+            { "NONE", $STR_C_Remove_headgear, 0, "" },
+            { "H_Beret_02", "", 10, "call life_justizlevel >= 1" },
+            { "H_Watchcap_blk", "", 10, "call life_justizlevel >= 1" },
+            { "TRYK_H_headsetcap_blk_Glasses", "", 10, "call life_justizlevel >= 1" },
+            { "H_Hat_brown", "", 10, "call life_justizlevel >= 1" },
+            { "H_Cap_usblack", "", 10, "call life_justizlevel >= 1" },
+            { "steff_swat_helmet_black", "S-O-G", 10, "call life_justizlevel >= 7" }//SOG
+        };
+        goggles[] = {
+            { "NONE", $STR_C_Remove_goggles, 0, "" },
+            { "G_Squares", "", 5, "call life_justizlevel >= 1" },//Quadrat Ding
+            { "G_Squares_Tinted", "", 5, "call life_justizlevel >= 1" },//Quadrat Ding Schwarz
+            { "G_Aviator", "", 5, "call life_justizlevel >= 1" },//Pilot
+            { "G_Spectacles_Tinted", "", 5, "call life_justizlevel >= 1" },//Getönte Brille
+            { "TRYK_kio_balaclava_ESS", "S-O-G", 5, "call life_justizlevel >= 7" }//SOG
+        };
+        vests[] = {
+            { "NONE", $STR_C_Remove_vests, 0, "" },
+            { "detective_belt", "", 50, "call life_justizlevel >= 1" },
+            { "PATHuK_police_vest", "", 50, "call life_justizlevel >= 6" },
+            { "TAC_V_tacv1_MSL2", "", 50, "call life_justizlevel >= 7" },
+            { "V_PlateCarrier1_blk", "S-O-G", 50, "call life_justizlevel >= 7" }, //SOG
+            { "steff_swat_helmet_black", "S-O-G", 50, "call life_justizlevel >= 7" }//SOG
+        };
+        backpacks[] = {
+            { "NONE", $STR_C_Remove_backpacks, 0, "call life_justizlevel >= 1" },
+            { "tf_anprc155", "", 50, "" }
+        };
+    };
+     
+     
+     
+___________________________________________________________________________________________________________________________________________________________________
+ 
+ 
+ 
+ 
+    class justiz_car {  
+        side = "justiz";
+        conditions = "";
+        vehicles[] = {
+            { "A3F_X5_11_Black", "call life_justizlevel >= 7" },
+            { "A3F_X6_10_Black", "call life_justizlevel >= 7" },
+            { "A3F_Yukon_18_Black", "call life_justizlevel >= 7" },
+            { "A3F_M5_12_Black", "call life_justizlevel >= 7" },
+            { "A3F_Explorer_19_P_TL_V3", "call life_justizlevel >= 6" },
+            { "A3F_Camaro_18_P_US_V2", "call life_justizlevel >= 7" },
+            { "A3F_Tahoe_13_P_U_V2", "call life_justizlevel >= 7" },
+            { "A3F_Charger_12_P_TL_V3", "call life_justizlevel >= 7" },
+            { "A3F_H1_06_P_SWAT_V1", "call life_justizlevel >= 7" }
+        };
+    };
+     
+    
